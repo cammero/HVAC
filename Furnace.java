@@ -1,11 +1,8 @@
-package com.clara;
-
 
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Date;
 import java.util.HashMap;
-
 
 public class Furnace extends ServiceCall {
 
@@ -38,7 +35,6 @@ public class Furnace extends ServiceCall {
                 "Resolved Date = " + resolvedDateString + "\n" +
                 "Resolution = " + resolutionString + "\n" +
                 "Fee = " + feeString ;
-
     }
 
 
@@ -69,7 +65,6 @@ public class Furnace extends ServiceCall {
             else {
                 return "Unknown type";
             }
-
         }
 
         public static String furnaceTypeUserChoices() {
@@ -78,20 +73,14 @@ public class Furnace extends ServiceCall {
             ArrayList<Integer> keys = new ArrayList<Integer>(furnaceTypes.keySet());
             Collections.sort(keys);
 
-
             //Build and return a string of all the keys and their values
             String userChoices = "";
             for (Integer k : keys) {
 
                 userChoices = userChoices + k + " : " + furnaceTypes.get(k) + "\n";
-
             }
 
             return userChoices;
         }
-
     }
-
-
-
 }

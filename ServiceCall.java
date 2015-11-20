@@ -1,4 +1,3 @@
-package com.clara;
 
 import java.util.Date;
 
@@ -57,7 +56,6 @@ public class ServiceCall {
         this.problemDescription = problemDescription;
     }
 
-
     public String getResolution() {
         return resolution;
     }
@@ -73,6 +71,5 @@ public class ServiceCall {
     public void setFee(double fee) {
         this.fee = fee;
     }
-
 
 }

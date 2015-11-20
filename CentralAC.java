@@ -1,4 +1,4 @@
-package com.clara;
+
 
 import java.util.Date;
 
@@ -23,7 +23,6 @@ public class CentralAC extends ServiceCall{
         this.model = model;
     }
 
-
     @Override
     public String toString() {
 
@@ -33,12 +32,11 @@ public class CentralAC extends ServiceCall{
 
 
         return "Central AC Unit Service Call " + "\n" +
-                "Service Address= " + serviceAddress + "\n" +
+                "Service Address = " + serviceAddress + "\n" +
                 "Problem Description = " + problemDescription  + "\n" +
                 "Reported Date = " + reportedDate + "\n" +
                 "Resolved Date = " + resolvedDateString + "\n" +
                 "Resolution = " + resolutionString + "\n" +
                 "Fee = " + feeString ;
-
     }
 }

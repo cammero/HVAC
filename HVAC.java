@@ -1,4 +1,3 @@
-package com.clara;
 
 import java.util.LinkedList;
 import java.util.Date;
@@ -115,7 +114,6 @@ public class HVAC {
 
                     for (ServiceCall c : resolvedServiceCalls) {
                         System.out.println(c + "\n");
-
                     }
                     break;
                 }
@@ -123,16 +121,12 @@ public class HVAC {
                 case 6: {
                     quit = true;
                     break;
-
                 }
 
                 default: {
                     System.out.println("Enter a number from the menu choices");
                 }
-
             }
-
-
         }
 
         System.out.println("Thanks, bye!");
@@ -147,7 +141,8 @@ public class HVAC {
 
         System.out.println("1. Add service call for furnace");
         System.out.println("2. Add service call for AC unit");
-        System.out.println("3. Quit");
+        System.out.println("3. Add service call for water heater");
+        System.out.println("4. Quit");
 
         int choice = getPositiveIntInput();
 
@@ -192,15 +187,28 @@ public class HVAC {
 
             }
             case 3: {
+
+                System.out.println("Enter address of water heater");
+                String address = getStringInput();
+                System.out.println("Enter description of problem");
+                String problem = getStringInput();
+                System.out.println("Enter age of water heater");
+                int age = getPositiveIntInput();
+
+                WaterHeater wh = new WaterHeater(address, problem, new Date(), age);
+                todayServiceCalls.add(wh);
+                System.out.println("Added the following water heater unit to list of calls:\n" + wh);
+                break;
+            }
+
+            case 4: {
                 return;
 
             }
             default: {
                 System.out.println("Enter a number from the menu choices");
             }
-
         }
-
     }
 
 
@@ -222,7 +230,6 @@ public class HVAC {
                 System.out.println("Please type a positive number");
             }
         }
-
     }
 
     private static double getPositiveDoubleInput() {
@@ -241,14 +248,12 @@ public class HVAC {
                 System.out.println("Please type a positive number");
             }
         }
-
     }
 
     private static String getStringInput() {
 
         String entry = scanner.nextLine();
         return entry;
-
     }
 }
 
